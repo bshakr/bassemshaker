@@ -1,0 +1,8 @@
+#app-notifications
+  - flash.each do |type, msg|
+    - type_mappings = { alert: 'error' }
+    %div{ class: "alert alert-#{type_mappings[type.to_sym]||type}" }
+      %a.close{ data: { dismiss: 'alert' } }×
+      %i{ class: "fa #{alert_icon_for(type)}" }
+      %span.message
+        = msg

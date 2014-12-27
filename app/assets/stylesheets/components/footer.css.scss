@@ -1,0 +1,29 @@
+.footer {
+  background: transparent;
+  font-weight: 300;
+  color: $grey;
+  @media screen and (max-width: $break-medium-small) {
+    font-size: 12px;
+  }
+  .owner {
+    color: $grey;
+    display: inline;
+    @media screen and (max-width: $break-medium-small) {
+      display: none !important;
+    }
+  }
+  .copyright {
+    margin: 20px 0;
+  }
+  &.coming-soon-footer {
+    a {
+      color: #fff;
+      &:hover, &:focus, &:active {
+        color: $light-grey;
+      }
+    }
+    .owner {
+      color: $light-grey;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+!!!
+%html
+  = render 'application/head'
+  %body
+    .app-wrapper
+      .main-panel
+        = render 'application/alerts'
+        = yield
+      = render 'application/footer'
