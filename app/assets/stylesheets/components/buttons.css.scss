@@ -1,0 +1,78 @@
+.btn {
+  border-radius: 2px;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+  background-color: $light-grey;
+  text-shadow: none;
+  color: $dark-blue;
+  font-weight: 300;
+  transition: background-color 0.2s ease-in-out;
+  &:hover {
+    background-color: darken($grey, 6%);
+    color: $dark-blue;
+  }
+}
+
+.btn-primary {
+  background-color: $blue;
+  color: #fff;
+  &:hover, &:active, &:focus {
+    background-color: saturate(darken($blue, 8%), 12%);
+    color: #fff;
+  }
+}
+
+.btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active, .btn-primary.disabled.active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary.active {
+  background-color: lighten(desaturate(lighten($blue, 12%), 22%), 4%);
+}
+
+.btn-danger {
+  background-color: $red;
+  color: #fff;
+  &:hover, &:active {
+    background-color: desaturate(darken($red, 8%), 10%);
+    color: #fff;
+  }
+}
+
+.btn-inverse {
+  background-color: $dark-blue;
+  color: #fff;
+  &:hover, &:active {
+    background-color: saturate(darken($dark-blue, 8%), 10%);
+    color: #fff;
+  }
+}
+
+.btn-success {
+  background-color: $green;
+  color: #fff;
+  &:hover, &:active {
+    background-color: darken($green, 8%);
+  }
+}
+
+.btn-warning {
+  background-color: $yellow;
+  color: #fff;
+  &:hover, &:active {
+    background-color: desaturate($yellow, 14%);
+  }
+}
+
+.bootstrap-select button.btn.dropdown-toggle:focus {
+  outline-color: transparent;
+  outline-offset: 0px;
+  outline-width: 0px;
+  outline: none;
+}
+
+.bootstrap-select.btn-group .dropdown-menu li > a {
+  color: $dark-blue;
+  &:focus, &:active {
+    outline-color: transparent;
+    outline-offset: 0px;
+    outline-width: 0px;
+  }
+}
