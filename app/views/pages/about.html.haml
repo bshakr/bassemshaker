@@ -1,4 +1,27 @@
 .container
   .row
     .col-sm-12
-      %h1 About page
+      %h1.center About
+  .row
+    .col-sm-6.col-sm-offset-3
+      %p.lead.center
+        I'm a developer / designer living in London, UK.
+        %br
+        I work at
+        %a{ href: 'http://happinessworks.com/', target: '_blank' } Happiness Works
+        building
+        %a{ href: 'http://moodmap.com/', target: '_blank' } Moodmap
+        \.
+      %p.lead.center
+        Last month I pushed
+        %strong 391 commits
+        , that's
+        %strong 4832 lines of code
+        \. I've walked
+        %strong 59348 steps
+        and drank
+        %strong 45 cups of coffee
+        \.
+  .row.instarow
+    - @instagram.each do |instagram|
+      = image_tag instagram.images.standard_resolution.url, class: 'instapic'

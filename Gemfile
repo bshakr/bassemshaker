@@ -15,6 +15,7 @@ gem 'haml', '~> 4.0.0'
 gem 'haml-rails'
 gem 'bourbon'
 gem 'turbolinks'
+gem 'instagram'
 
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
