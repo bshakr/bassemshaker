@@ -14,5 +14,5 @@ test:
 production:
   <<: *default
   database: bassemshaker_production
-  username: bassemshaker
-  password: <%= ENV['BASSEMSHAKER_DATABASE_PASSWORD'] %>
+#  username: bassemshaker
+#  password: <%= ENV['BASSEMSHAKER_DATABASE_PASSWORD'] %>
