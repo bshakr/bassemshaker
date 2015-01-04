@@ -3,12 +3,9 @@ lock '3.1.0'
 
 set :application, 'bassemshaker'
 set :repo_url, 'git@github.com:bshakr/bassemshaker.git'
-
-# Default branch is :master
-# ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
-
 set :deploy_to, '/opt/www/bassemshaker'
 set :user, 'deploy'
+set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets}
 
 # Default value for :scm is :git
 # set :scm, :git
@@ -35,7 +32,6 @@ set :user, 'deploy'
 # set :keep_releases, 5
 
 namespace :deploy do
-
   %w[start stop restart].each do |command|
     desc 'Manage Unicorn'
     task command do
@@ -46,4 +42,13 @@ namespace :deploy do
   end
 
   after :publishing, :restart
+
+  after :restart, :clear_cache do
+    on roles(:web), in: :groups, limit: 3, wait: 10 do
+      # Here we can do anything such as:
+      # within release_path do
+      #   execute :rake, 'cache:clear'
+      # end
+    end
+  end
 end
