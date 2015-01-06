@@ -6,6 +6,10 @@ gem 'rails', '4.2.0'
 gem 'pg'
 gem 'unicorn'
 
+# Data
+gem 'instagram'
+gem 'github_api'
+
 # Frontend
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -15,7 +19,7 @@ gem 'haml', '~> 4.0.0'
 gem 'haml-rails'
 gem 'bourbon'
 gem 'turbolinks'
-gem 'instagram'
+
 
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc

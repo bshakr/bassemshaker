@@ -25,3 +25,9 @@
   .row.instarow
     - @instagram.each do |instagram|
       = image_tag instagram.images.standard_resolution.url, class: 'instapic'
+  .row.commits
+    = @commits.count
+    = @repos
+    - @commits.each do |commit|
+      %code
+        = commit
