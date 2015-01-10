@@ -86,6 +86,9 @@ GEM
       multi_json (>= 1.7.5, < 2.0)
       nokogiri (~> 1.6.3)
       oauth2
+    github_cli (0.6.2)
+      github_api (~> 0.10)
+      tty (~> 0.0.10)
     globalid (0.3.0)
       activesupport (>= 4.1.0)
     haml (4.0.5)
@@ -205,6 +208,7 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
+    tty (0.0.11)
     turbolinks (2.5.3)
       coffee-rails
     tzinfo (1.2.2)
@@ -231,6 +235,7 @@ DEPENDENCIES
   capistrano-rails
   coffee-rails (~> 4.1.0)
   github_api
+  github_cli
   haml (~> 4.0.0)
   haml-rails
   instagram

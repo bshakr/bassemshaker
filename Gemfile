@@ -9,6 +9,7 @@ gem 'unicorn'
 # Data
 gem 'instagram'
 gem 'github_api'
+gem 'github_cli'
 
 # Frontend
 gem 'sass-rails', '~> 5.0'
