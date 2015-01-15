@@ -1,0 +1,18 @@
+AllCops:
+  Include:
+    - lib/tasks/**
+  Exclude:
+    - bin/**
+    - db/schema.rb
+    - vendor/bundle/**/*
+
+# We don't require documentation for methods
+Documentation:
+  Enabled: false
+
+# Screens are wide now
+LineLength:
+  Max: 120
+
+MethodLength:
+  Max: 25
