@@ -5,7 +5,7 @@ set :application, 'bassemshaker'
 set :repo_url, 'git@github.com:bshakr/bassemshaker.git'
 set :deploy_to, '/opt/www/bassemshaker'
 set :user, 'deploy'
-set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets}
+set :linked_dirs, %w(log tmp/pids tmp/cache tmp/sockets)
 
 # Default value for :scm is :git
 # set :scm, :git
@@ -32,7 +32,7 @@ set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets}
 # set :keep_releases, 5
 
 namespace :deploy do
-  %w[start stop restart].each do |command|
+  %w(start stop restart).each do |command|
     desc 'Manage Unicorn'
     task command do
       on roles(:app), in: :sequence, wait: 1 do
