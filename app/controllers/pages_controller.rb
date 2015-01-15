@@ -11,5 +11,6 @@ class PagesController < ApplicationController
     @commits = []
     @commits += @repos.map{ |r| @github.repos.commits.all 'bshakr', r }.flatten
     @activities = @repos.map{ |r| @github.repos.stats.code_frequency 'bshakr', r }
+    @events = @github.activity.events.performed 'bshakr', 'moodmap', page: 10
   end
 end
