@@ -25,36 +25,13 @@
   .row.instarow
     - @instagram.each do |instagram|
       = image_tag instagram.images.standard_resolution.url, class: 'instapic'
-  .row.commits
-    %h3 Repos
-    = @repos
-    %h3 Commits
-    = @commits.count
-    %h3 Commit Messages
-    %ul
-      - @commits.each do |c|
-        %li= c.commit.message
-    %h3 Additions/Deletions
-    %code
-    %ul
-      - @activities.last.each do |activity|
-        %li
-          %strong.date
-            Date:
-            = Time.at(activity.first).to_date
-          .additions
-            Additions:
-            = activity[1]
-          .deletions
-            Deletions:
-            = activity[2]
   .row.events
     - @events.each do |e|
       - if e.type == 'PushEvent'
         %h4= "#{e.payload.commits.count} commits on #{e.created_at}"
         %ul
           - e.payload.commits.each do |c|
-            %li= e.message
+            %li= c.message
         %br
         %hr
 
