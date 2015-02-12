@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  root 'pages#about'
+  root 'pages#root'
 end
