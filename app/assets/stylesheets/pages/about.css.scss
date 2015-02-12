@@ -1,0 +1,17 @@
+.about-container {
+  height: 100%;
+  .row.instarow {
+    margin-top: 100px;
+    margin-left: -140px;
+    margin-right: -140px;
+    overflow: hidden;
+    height: 200px;
+    max-height: 200px;
+  }
+
+  .instapic {
+    float:left;
+    width:200px;
+    height:200px;
+  }
+}
