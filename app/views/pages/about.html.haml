@@ -1,4 +1,26 @@
-.container
-  .row
+.container.about-container
+  .row.vertical-center
     .col-sm-12
-      %h1 About page
+      .row
+        .col-sm-12
+          %h1.center About
+      .row
+        .col-sm-6.col-sm-offset-3
+          %p.lead.center
+            I'm a developer / designer living in London, UK.
+            %br
+            I work at
+            %a{ href: 'http://happinessworks.com/', target: '_blank' } Happiness Works
+            building
+            %a{ href: 'http://moodmap.io/', target: '_blank' } Moodmap
+            \.
+          %p.lead.center
+            Last month I pushed
+            %strong= "#{@commits.count} commits"
+            , that's
+            %strong 4832 lines of code
+            \. I've walked
+            %strong= "#{@total_lines_of_code} steps"
+            and drank
+            %strong 45 cups of coffee
+            \.
